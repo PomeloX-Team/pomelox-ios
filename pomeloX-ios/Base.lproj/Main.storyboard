@@ -5,6 +5,8 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,12 +46,19 @@
                                     <constraint firstAttribute="trailing" secondItem="g2m-P8-gDK" secondAttribute="trailing" constant="20" id="MdR-gd-xHk"/>
                                 </constraints>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="jby-Sc-kcN">
+                                <rect key="frame" x="47" y="228" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jby-Sc-kcN" secondAttribute="height" multiplier="1:1" id="MH5-Yi-q7c"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fiX-Er-kZE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="6w8-oe-xMA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fiX-Er-kZE" secondAttribute="trailing" constant="20" id="RvW-kz-gdh"/>
                             <constraint firstItem="fiX-Er-kZE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ejc-ok-eIu"/>
+                            <constraint firstItem="jby-Sc-kcN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="208" id="f6N-fh-Gax"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -63,4 +72,7 @@
             <point key="canvasLocation" x="24.800000000000001" y="-226.23688155922042"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="320" height="320"/>
+    </resources>
 </document>
