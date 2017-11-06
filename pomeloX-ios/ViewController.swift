@@ -9,10 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    //MASK: Properties
+    
+    @IBOutlet weak var yourNameLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    //MASK: Actions
+    @IBAction func setDefaultLabelText(_: UIButton) {
+          yourNameLabel.text = "Default Text"
     }
     
     
