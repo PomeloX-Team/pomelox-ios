@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     //MASK: Properties
     
     @IBOutlet weak var yourNameLabel: UILabel!
@@ -16,9 +16,19 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        nameTextField.delegate = self
+    }
+    //MASK: UITextFieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // Hide the keyboard.
+        textField.resignFirstResponder()
+        return true
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        yourNameLabel.text = textField.text
     }
     //MASK: Actions
-    @IBAction func setDefaultLabelText(_: UIButton) {
+    @IBAction func setDefaultLabelText(_ sender: UIButton) {
           yourNameLabel.text = "Default Text"
     }
     
