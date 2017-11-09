@@ -18,8 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="fiX-Er-kZE">
-                                <rect key="frame" x="20" y="69.999999999999972" width="374" height="400.33333333333326"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="fiX-Er-kZE">
+                                <rect key="frame" x="20" y="70" width="374" height="510.33333333333326"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIJ-7T-Rso">
                                         <rect key="frame" x="0.0" y="0.0" width="86" height="20.333333333333332"/>
@@ -50,6 +50,9 @@
                                             <outletCollection property="gestureRecognizers" destination="bcU-A9-vsF" appends="YES" id="edO-Es-FIE"/>
                                         </connections>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dJq-4Y-hYE" customClass="ButtonCtrl" customModule="pomeloX_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="400.33333333333331" width="200" height="110"/>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="g2m-P8-gDK" secondAttribute="trailing" constant="20" id="MdR-gd-xHk"/>
