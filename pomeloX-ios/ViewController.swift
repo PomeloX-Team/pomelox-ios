@@ -7,14 +7,19 @@
 //
 
 import UIKit
-
+import os.log
 class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     //MASK: Properties
     
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var yourNameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
-    @IBOutlet weak var ratingControl: RatingControl!
+    /*
+    This value is either passed by `PomeloTableViewController` in `prepare(for:sender:)`
+    or constructed as part of adding a new pomelo.
+    */
+    var pomelo: Pomelo?
+    @IBOutlet weak var saveBtn: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -28,6 +33,28 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         yourNameLabel.text = textField.text
+    }
+    //MARK: Navigation
+    // This method lets you configure a view controller before it's presented.
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        // Configure the destination view controller only when the save button is pressed.
+        guard let button = sender as? UIBarButtonItem, button === saveBtn else {
+            os_log("The save button was not pressed, cancelling", log: OSLog.default, type: .debug)
+            return
+        }
+        
+        let name = nameTextField.text ?? ""
+        let photo = photoImageView.image
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMMM dd, yyyy"
+        let date = dateFormatter.string(from: currentDate)
+        
+        
+        // Set the pomelo to be passed to PomeloTableViewController after the unwind segue.
+        pomelo = Pomelo(name: name, photo: photo, date: date)
     }
     //MASK: Actions
     @IBAction func setDefaultLabelText(_ sender: UIButton) {

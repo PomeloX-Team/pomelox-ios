@@ -61,7 +61,7 @@
                     <navigationItem key="navigationItem" title="Your Pomelos" id="NjI-vj-1sq">
                         <barButtonItem key="rightBarButtonItem" title="+" id="RR7-pg-3oz">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="2rc-2V-e4u"/>
+                                <segue destination="1tD-cV-wKq" kind="presentation" identifier="AddItem" id="2rc-2V-e4u"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -70,7 +70,7 @@
             </objects>
             <point key="canvasLocation" x="-460.86956521739131" y="-233.1521739130435"/>
         </scene>
-        <!--View Controller-->
+        <!--New Pomelo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pomeloX_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -81,13 +81,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="fiX-Er-kZE">
                                 <rect key="frame" x="20" y="70" width="374" height="476.33333333333326"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIJ-7T-Rso">
-                                        <rect key="frame" x="0.0" y="0.0" width="86" height="20.333333333333332"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pomelo name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIJ-7T-Rso">
+                                        <rect key="frame" x="0.0" y="0.0" width="108.66666666666667" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2m-P8-gDK">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Pomelo No:" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g2m-P8-gDK">
                                         <rect key="frame" x="0.0" y="20.333333333333343" width="354" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -127,20 +127,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="New Pomelo" id="jlZ-Ip-rLn">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="yLc-8G-tKL"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="dfj-Lt-pRN">
+                            <connections>
+                                <segue destination="m3A-kD-Cj9" kind="unwind" unwindAction="unwindToPomeloListWithSender:" id="XlD-5L-gwC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="nameTextField" destination="g2m-P8-gDK" id="Kxz-aC-H7R"/>
                         <outlet property="photoImageView" destination="ZIE-eh-FPh" id="OMj-1L-XzQ"/>
+                        <outlet property="saveBtn" destination="dfj-Lt-pRN" id="wYa-HO-Zzy"/>
                         <outlet property="yourNameLabel" destination="HIJ-7T-Rso" id="UCP-5Z-NVs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="m3A-kD-Cj9" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="bcU-A9-vsF">
                     <connections>
                         <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="5kM-UB-cfC"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="330.43478260869568" y="-227.44565217391306"/>
+            <point key="canvasLocation" x="952" y="-233"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vv6-o9-Efh">
@@ -159,6 +169,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YIf-9d-MpA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1384" y="-233"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="F6X-SF-79q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1tD-cV-wKq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tKX-2U-yQk">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kqS-3q-Mgz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xwk-o7-hLM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257" y="-233"/>
         </scene>
     </scenes>
     <resources>

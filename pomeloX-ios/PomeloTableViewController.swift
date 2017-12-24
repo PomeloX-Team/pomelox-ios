@@ -41,7 +41,15 @@ class PomeloTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    //MARK: Actions
+    @IBAction func unwindToPomeloList(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? ViewController, let pomelo = sourceViewController.pomelo {
+            // Add a new meal.
+            let newIndexPath = IndexPath(row: pomelos.count, section: 0)
+            pomelos.append(pomelo)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+    }
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
