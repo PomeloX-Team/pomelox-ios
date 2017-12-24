@@ -10,6 +10,8 @@
 		8702FC4A1FEBA6690086E0E2 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702FC491FEBA6690086E0E2 /* RatingControl.swift */; };
 		8702FC4C1FEBDCF10086E0E2 /* Pomelo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8702FC4B1FEBDCF10086E0E2 /* Pomelo.swift */; };
 		8799B8611FB47C5000C6ABAE /* ButtonCtrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8799B8601FB47C5000C6ABAE /* ButtonCtrl.swift */; };
+		87E5594A1FEFC14000834995 /* PomeloTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E559491FEFC14000834995 /* PomeloTableViewCell.swift */; };
+		87E559541FEFE1D500834995 /* PomeloTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E559531FEFE1D500834995 /* PomeloTableViewController.swift */; };
 		CF168B651FAA7A6800A23C19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF168B641FAA7A6800A23C19 /* AppDelegate.swift */; };
 		CF168B671FAA7A6800A23C19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF168B661FAA7A6800A23C19 /* ViewController.swift */; };
 		CF168B6A1FAA7A6800A23C19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF168B681FAA7A6800A23C19 /* Main.storyboard */; };
@@ -17,6 +19,45 @@
 		CF168B6F1FAA7A6800A23C19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF168B6D1FAA7A6800A23C19 /* LaunchScreen.storyboard */; };
 		CF168B7A1FAA7A6800A23C19 /* pomeloX_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF168B791FAA7A6800A23C19 /* pomeloX_iosTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		87E5594D1FEFCF9000834995 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "";
+		};
+		87E5594E1FEFCF9200834995 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "";
+		};
+		87E5594F1FEFCF9300834995 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "";
+		};
+		87E559501FEFCF9400834995 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		CF168B761FAA7A6800A23C19 /* PBXContainerItemProxy */ = {
@@ -32,6 +73,8 @@
 		8702FC491FEBA6690086E0E2 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		8702FC4B1FEBDCF10086E0E2 /* Pomelo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pomelo.swift; sourceTree = "<group>"; };
 		8799B8601FB47C5000C6ABAE /* ButtonCtrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCtrl.swift; sourceTree = "<group>"; };
+		87E559491FEFC14000834995 /* PomeloTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomeloTableViewCell.swift; sourceTree = "<group>"; };
+		87E559531FEFE1D500834995 /* PomeloTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomeloTableViewController.swift; sourceTree = "<group>"; };
 		CF168B611FAA7A6800A23C19 /* pomeloX-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pomeloX-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF168B641FAA7A6800A23C19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF168B661FAA7A6800A23C19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +129,8 @@
 				CF168B641FAA7A6800A23C19 /* AppDelegate.swift */,
 				CF168B661FAA7A6800A23C19 /* ViewController.swift */,
 				8702FC491FEBA6690086E0E2 /* RatingControl.swift */,
+				87E559491FEFC14000834995 /* PomeloTableViewCell.swift */,
+				87E559531FEFE1D500834995 /* PomeloTableViewController.swift */,
 				8702FC4B1FEBDCF10086E0E2 /* Pomelo.swift */,
 				8799B8601FB47C5000C6ABAE /* ButtonCtrl.swift */,
 				CF168B681FAA7A6800A23C19 /* Main.storyboard */,
@@ -117,6 +162,10 @@
 				CF168B5F1FAA7A6800A23C19 /* Resources */,
 			);
 			buildRules = (
+				87E559501FEFCF9400834995 /* PBXBuildRule */,
+				87E5594F1FEFCF9300834995 /* PBXBuildRule */,
+				87E5594E1FEFCF9200834995 /* PBXBuildRule */,
+				87E5594D1FEFCF9000834995 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -209,8 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8702FC4A1FEBA6690086E0E2 /* RatingControl.swift in Sources */,
+				87E5594A1FEFC14000834995 /* PomeloTableViewCell.swift in Sources */,
 				CF168B671FAA7A6800A23C19 /* ViewController.swift in Sources */,
 				CF168B651FAA7A6800A23C19 /* AppDelegate.swift in Sources */,
+				87E559541FEFE1D500834995 /* PomeloTableViewController.swift in Sources */,
 				8799B8611FB47C5000C6ABAE /* ButtonCtrl.swift in Sources */,
 				8702FC4C1FEBDCF10086E0E2 /* Pomelo.swift in Sources */,
 			);
